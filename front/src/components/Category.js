@@ -7,6 +7,8 @@ import PersonPinIcon from '@mui/icons-material/PersonPin';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Post from './Post';
+import Typography from '@mui/material/Typography';
+
 
 const Category = () => {
     const [value, setValue] = React.useState(0);
@@ -18,7 +20,11 @@ const Category = () => {
   <Box>
 <Stack
 
-><Tabs value={value} onChange={handleChange} aria-label="icon label tabs example" centered>
+>
+<Typography mt="50px" mb="50px" variant="h2" align="center">
+              THANKS FOR STOPPING BY
+            </Typography>
+    <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example" centered>
     <Tab icon={<PhoneIcon />} label="RECENTS" />
     <Tab icon={<FavoriteIcon />} label="FAVORITES" />
     <Tab icon={<PersonPinIcon />} label="NEARBY" />
