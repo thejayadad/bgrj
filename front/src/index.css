@@ -6,4 +6,6 @@
 
 body{
   font-family: monospace;
+  overflow-x: hidden;
+  background: lightgray;
 }
