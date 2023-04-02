@@ -64,9 +64,11 @@ const Category = () => {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    background: "#FDF1D3",
+    background: "#F2F3EC",
     borderRadius: "9px",
-    marginTop: "30px"
+    marginTop: "30px",
+    border: "1px solid #ddd"
+
   }}
   >
     <Post />

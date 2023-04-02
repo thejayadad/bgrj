@@ -42,7 +42,8 @@ const Navbar = () => {
       setAnchorElUser(null);
     };
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center',  borderBottom: '1px solid #ddd',
+      }}>
           <Typography variant="h6" sx={{ my: 2 }}>
             UserName
           </Typography>

@@ -19,6 +19,7 @@ const Banner = () => {
         width: "100%",
         display: "flex",
         justifyContent: "center",
+        borderBottom: "1px solid #ddd"
     }}
     >
  <Box sx={{  opacity: "1" }}>
