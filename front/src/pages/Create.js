@@ -8,6 +8,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Button from '@mui/material/Button';
 
 
 
@@ -59,7 +60,13 @@ const Create = () => {
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
-
+        <Button sx={{ mt:"20px"}} fullWidth variant="contained" component="label">
+        Upload
+        <input hidden accept="image/*" multiple type="file" />
+      </Button>
+      <Button sx={{ mt:"20px"}} fullWidth variant="contained" component="label">
+        Submit
+      </Button>
               </form>
 
             </Box>
