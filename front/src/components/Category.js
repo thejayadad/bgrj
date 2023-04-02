@@ -24,7 +24,13 @@ const Category = () => {
 <Typography mt="50px" mb="50px" variant="h2" align="center">
               THANKS FOR STOPPING BY
             </Typography>
-    <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example" centered>
+    <Tabs  value={value} onChange={handleChange} aria-label="icon label tabs example" centered>
+    <Tab icon={<PhoneIcon />} label="RECENTS" />
+    <Tab icon={<FavoriteIcon />} label="FAVORITES" />
+    <Tab icon={<PersonPinIcon />} label="NEARBY" />
+    <Tab icon={<PhoneIcon />} label="RECENTS" />
+    <Tab icon={<FavoriteIcon />} label="FAVORITES" />
+    <Tab icon={<PersonPinIcon />} label="NEARBY" />
     <Tab icon={<PhoneIcon />} label="RECENTS" />
     <Tab icon={<FavoriteIcon />} label="FAVORITES" />
     <Tab icon={<PersonPinIcon />} label="NEARBY" />

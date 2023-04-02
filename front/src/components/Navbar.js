@@ -13,23 +13,34 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Menu from '@mui/material/Menu';
 
+import MenuItem from '@mui/material/MenuItem';
 
 
 
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 const Navbar = () => {
         const [mobileOpen, setMobileOpen] = React.useState(false);
+        const [anchorElUser, setAnchorElUser] = React.useState(false);
+
 
     const handleDrawerToggle = () => {
       setMobileOpen((prevState) => !prevState);
     };
 
-
+    const handleOpenUserMenu = (e) => {
+      setAnchorElUser(e.currentTarget);
+    };
+    const handleCloseUserMenu = () => {
+      setAnchorElUser(null);
+    };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
           <Typography variant="h6" sx={{ my: 2 }}>
@@ -62,7 +73,12 @@ const Navbar = () => {
         color: "black",
       }}
       component="nav">
-        <Toolbar>
+        <Toolbar disableGutters
+        sx={{
+          display: "flex",
+          justifyContent: "space-between"
+        }}
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -81,11 +97,37 @@ const Navbar = () => {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: 'black' }}>
                 {item}
               </Button>
             ))}
           </Box>
+          <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              </IconButton>
+              <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+
         </Toolbar>
       </AppBar>
       <Box component="nav">

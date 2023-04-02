@@ -14,6 +14,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 import Button from '@mui/material/Button';
 
@@ -28,7 +29,7 @@ const Post = () => {
     };
   return (
     <div>
-  <Card sx={{ maxWidth: 365, margin: 3, height: 745 }}>
+  <Card sx={{ maxWidth: 365, margin: 3, height: 705 }}>
 
       <CardMedia
         component="img"
@@ -49,14 +50,9 @@ const Post = () => {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
+          Title of Post asrhadgn adfbn adb
         </Typography>
-        <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+
       </CardContent>
 
       <CardActions
@@ -65,19 +61,32 @@ const Post = () => {
         color: "#222"
       }}
       disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton
+             sx={{
+                display: "flex",
+                flexDirection: "column",
+                fontSize: "10px"
+            }}
+        aria-label="add to favorites">
+              <Typography variant="body8">
+                0
+            </Typography>
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
+        <IconButton
+         sx={{
+            display: "flex",
+            flexDirection: "column",
+            fontSize: "10px"
+        }}
+        aria-label="share">
+            <Typography variant="body8">
+                0
+            </Typography>
+          <LiveTvIcon label="view" />
         </IconButton>
 
       </CardActions>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-
     </Card>
 
 
