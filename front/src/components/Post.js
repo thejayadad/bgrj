@@ -65,26 +65,49 @@ const Post = () => {
              sx={{
                 display: "flex",
                 flexDirection: "column",
-                fontSize: "10px"
+                fontSize: "12px"
             }}
         aria-label="add to favorites">
               <Typography variant="body8">
                 0
             </Typography>
-          <FavoriteIcon />
+          <FavoriteIcon
+            sx={{
+
+              fontSize: "18px"
+          }}
+          />
         </IconButton>
         <IconButton
          sx={{
             display: "flex",
             flexDirection: "column",
-            fontSize: "10px"
+            fontSize: "12px"
         }}
         aria-label="share">
             <Typography variant="body8">
                 0
             </Typography>
-          <LiveTvIcon label="view" />
+          <LiveTvIcon
+            sx={{
+
+              fontSize: "18px"
+          }}
+
+          label="view" />
         </IconButton>
+        <IconButton
+         sx={{
+            display: "flex",
+            flexDirection: "column",
+            fontSize: "12px"
+        }}
+        aria-label="share">
+            <Typography variant="body8">
+                Category
+            </Typography>
+        </IconButton>
+
 
       </CardActions>
     </Card>
