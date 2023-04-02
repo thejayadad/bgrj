@@ -35,7 +35,9 @@ const Category = () => {
   };
 
   return (
-  <Box>
+  <Box
+
+  >
 <Stack
 
 >
@@ -61,7 +63,10 @@ const Category = () => {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "center"
+    justifyContent: "center",
+    background: "#FDF1D3",
+    borderRadius: "9px",
+    marginTop: "30px"
   }}
   >
     <Post />
