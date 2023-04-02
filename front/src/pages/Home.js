@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Category from '../components/Category'
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
+import Subscribe from '../components/Subscribe'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
         <Navbar />
         <Banner />
         <Category />
+        <Subscribe />
         <Footer />
 
 
