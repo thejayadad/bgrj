@@ -8,32 +8,51 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Post from './Post';
 import Typography from '@mui/material/Typography';
-
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import SportsFootballIcon from '@mui/icons-material/SportsFootball';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import FeedIcon from '@mui/icons-material/Feed';
+import PetsIcon from '@mui/icons-material/Pets';
+import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 
 const Category = () => {
     const [value, setValue] = React.useState(0);
 
-    const handleChange = (e) => {
-      setValue(value);
-    };
+    const categories =  [
+      {name: "All", icon: <FormatListBulletedIcon /> },
+      {name: "Sports", icon: <SportsFootballIcon /> },
+      {name: "Stocks", icon: <AttachMoneyIcon /> },
+      {name: "News", icon: <FeedIcon /> },
+      {name: "Pets", icon: <PetsIcon /> },
+      {name: "Venting", icon: <RecordVoiceOverIcon /> },
+
+]
+
+
+
+  const handleChange = (e, newValue: number) => {
+    setValue(newValue);
+  };
+
   return (
   <Box>
 <Stack
 
 >
 <Typography mt="50px" mb="50px" variant="h2" align="center">
-              THANKS FOR STOPPING BY
+              Check Out Our Categories
             </Typography>
-    <Tabs  value={value} onChange={handleChange} aria-label="icon label tabs example" centered>
-    <Tab icon={<PhoneIcon />} label="RECENTS" />
-    <Tab icon={<FavoriteIcon />} label="FAVORITES" />
-    <Tab icon={<PersonPinIcon />} label="NEARBY" />
-    <Tab icon={<PhoneIcon />} label="RECENTS" />
-    <Tab icon={<FavoriteIcon />} label="FAVORITES" />
-    <Tab icon={<PersonPinIcon />} label="NEARBY" />
-    <Tab icon={<PhoneIcon />} label="RECENTS" />
-    <Tab icon={<FavoriteIcon />} label="FAVORITES" />
-    <Tab icon={<PersonPinIcon />} label="NEARBY" />
+            <Tabs  value={value} onChange={handleChange} aria-label="icon label tabs example" centered>
+
+            {
+              categories.map((category) => (
+                <Tab
+                key={crypto.randomUUID()}
+                icon={category.icon} label={category.name} />
+
+              ))
+            }
+
   </Tabs>
   <Stack
   sx={{
