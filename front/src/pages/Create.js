@@ -4,9 +4,17 @@ import Footer from '../components/Footer'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 
 
 const Create = () => {
+  const [age, setAge] = React.useState('');
+
+
   return (
     <div>
       <Navbar />
@@ -27,15 +35,30 @@ const Create = () => {
             }}
             >
               <form>
-              <TextField mb="20px" id="outlined-basic" label="Title" variant="outlined" fullWidth />
+              <TextField
+              sx={{
+                margin: "20px 0"
+              }}
+              id="outlined-basic" label="Title" variant="outlined" fullWidth />
               <TextField
               fullWidth
-          id="outlined-multiline-static"
-          label="Description"
-          multiline
-          rows={4}
-          defaultValue="Default Value"
-        />
+              id="outlined-multiline-static"
+              label="Description"
+              multiline
+              rows={6}
+            />
+             <InputLabel id="demo-simple-select-label">Category</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          label="Category"
+          fullWidth
+
+        >
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
 
               </form>
 
