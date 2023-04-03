@@ -18,12 +18,7 @@ const Footer = () => {
           <Typography color={"black"} align={"center"}>
             Contact Us
           </Typography>
-          <Typography color={"black"} align={"center"}>
-            of squamate reptiles, with over 6,000 species,
-          </Typography>
-          <Typography color={"black"} align={"center"}>
-            continents except Antarcti
-          </Typography>
+
           <Typography color={"black"} align={"center"}>
             ranging across
           </Typography>

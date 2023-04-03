@@ -15,8 +15,10 @@ const Detail = () => {
       <Box
            sx={{
             maxWidth: "700px",
+            height: "100vh",
             margin: "auto",
             padding: "20px"
+
           }}
       >
         content
